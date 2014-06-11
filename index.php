@@ -1,3 +1,4 @@
+<h2>This is the consumer website!</h2>
 <?php
 
 /*
