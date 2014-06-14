@@ -7,7 +7,7 @@
  
 //call the "say_hello" method of the XMLRPC Server
 //and pass "World" as the first parameter
-$request = xmlrpc_encode_request("say_hello", array('World'));
+$request = xmlrpc_encode_request("say_hello", array('Workshop'));
 //create the stream context for the request
 $context = stream_context_create(array('http' => array(
     'method' => "POST",
