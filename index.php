@@ -16,12 +16,22 @@ $context = stream_context_create(array('http' => array(
 )));
 
 //URL of the XMLRPC Server
-$myHost = explode("-",$_SERVER['HTTP_HOST']);
-$server = 'http://' . $myHost[0] . '-services.work.shop/xmlrpc.php';
+$mySite = explode("-",$_SERVER['REQUEST_URI']);
+$server = 'http://localhost/' . $mySite[1] . 'dev/services/xmlrpc.php';
+
+echo "<p>Using " . $server . " as the url for the service</p>\n";
 
 $file = file_get_contents($server, false, $context);
 //decode the XMLRPC response
 $response = xmlrpc_decode($file);
 //display the response
 echo $response;
+
+
+// echo "<pre>\n"//;
+// print_r($_SERVER);
+
+// print_r(explode("/",$_SERVER['REQUEST_URI']));
+// echo "</pre>\n";
+
 ?>

@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'consumer_website'
-set :repo_url, 'git@localhost:workshop/consumer_website'
+set :repo_url, 'git@localhost:vagrant/consumer_website'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
